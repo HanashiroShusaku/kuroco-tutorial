@@ -14,7 +14,7 @@
 
 <script setup>
 const runtimeConfig = useRuntimeConfig();
-const url = `${runtimeConfig.public.baseUrl}/rcms-api/3/service/3`;
+const url = `${runtimeConfig.baseUrl}/rcms-api/3/service/3`;
 
 const { data, pending, error, refresh } = await useFetch(url);
 </script>
