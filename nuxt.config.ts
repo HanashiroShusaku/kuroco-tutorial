@@ -8,9 +8,8 @@ export default defineNuxtConfig({
   },
   // 環境変数の設定
   runtimeConfig: {
-    baseUrl: 'https://colrevo-hana-test.g.kuroco.app',
     public: {
-      baseUrl: 'https://colrevo-hana-test.g.kuroco.app',
+      baseUrl: process.env.BASE_URL,
     }
   },
   // SSR無効化
