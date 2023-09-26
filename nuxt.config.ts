@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     baseUrl: 'https://colrevo-hana-test.g.kuroco.app',
     public: {
-      baseUrl: process.env.BASE_URL,
+      baseUrl: 'https://colrevo-hana-test.g.kuroco.app',
     }
   },
   // SSR無効化
