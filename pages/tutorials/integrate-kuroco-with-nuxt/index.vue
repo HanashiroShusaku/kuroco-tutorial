@@ -14,5 +14,4 @@ const config = useRuntimeConfig();
 const url = `${config.public.baseUrl}/rcms-api/4/news`;
 
 const { data, pending, error, refresh } = await useFetch(url);
-console.log(data.value.list[1].topics_id)
 </script>

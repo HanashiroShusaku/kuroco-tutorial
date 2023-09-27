@@ -36,7 +36,7 @@
 
 <script setup>
 // cssの読み込み
-import '~/assets/tutorials/beginners-guide/style.css'
+import '~/assets/pages/tutorials/beginners-guide/style.css'
 
 // API叩く
 const runtimeConfig = useRuntimeConfig();
