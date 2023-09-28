@@ -6,7 +6,7 @@
         {{ n.ymd }} {{ n.subject }}
       </NuxtLink>
     </div>
-    
+    <Pagenator :pageInfo="data.pageInfo" @click="refresh()"/>
   </div>
 </template>
 
