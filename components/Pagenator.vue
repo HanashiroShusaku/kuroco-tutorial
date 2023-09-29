@@ -1,21 +1,20 @@
 <template>
   <ul>
     <li>
-      <NuxtLink
-        :to="{ path: route.path, query: { page: pageInfo.pageNo - 1 } }"
-        :class="pageInfo.pageNo <= 1 ? 'disabled' : ''"
-      >前へ</NuxtLink>
+      <a :href="`${route.path}?page=${pageInfo.pageNo - 1}`" :class="{disabled : pageInfo.pageNo <= 1}">前へ</a>
+    </li>
+    <li v-for="i in pageInfo.totalPageCnt" :key="i">
+      <a :href="`${route.path}?page=${i}`" :class="{disabled : pageInfo.pageNo === i}">{{ i }}</a>
     </li>
     <li>
-      <NuxtLink
-        :to="{ path: route.path, query: { page: pageInfo.pageNo + 1 } }"
-        :class="pageInfo.pageNo >= pageInfo.totalPageCnt ? 'disabled' : ''"
-      >次へ</NuxtLink>
+      <a :href="`${route.path}?page=${pageInfo.pageNo + 1}`" :class="{disabled : pageInfo.pageNo >= pageInfo.totalPageCnt}">次へ</a>
     </li>
   </ul>
 </template>
 
 <script setup>
+import '~/assets/components/Pagenator.css';
+
 const route = useRoute();
 
 // props

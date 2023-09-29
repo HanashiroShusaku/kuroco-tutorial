@@ -1,0 +1,11 @@
+ul {
+  list-style: none;
+  display: flex;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: black;
+}
